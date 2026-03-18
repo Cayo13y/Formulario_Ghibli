@@ -1,59 +1,67 @@
-/* CONFIGURAÇÕES GLOBAIS */
+/*  CONFIGURAÇÕES GLOBAIS */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
+    box-sizing: border-box;}
 
+/* VARIÁVEIS */
+:root {
+    --cor-creme: #f5f1e6;
+    --cor-creme-transparente: #f5f1e6b3;
+    --sombra-texto: 2px 2px 6px rgba(92, 59, 30, 0.9);}
+
+/* BODY, ONDE FOI INSERIDO O WALLPAPER */
 body {
-    background-image: url('../Images/Ghibli_Wallpaper.jpg');
+    background-image: url('../Images/menino.jpeg');
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-}
+    align-items: center;}
 
+
+/* CONTAINER PRINCIPAL DO FORMULÁRIO */
 .container {
     justify-content: center;
     display: flex;
     height: 580px;
-    width: 580px;
+    width: 480px;
     border: 2px solid #a67c52;
     border-radius: 15px;
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(10px);
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
-}
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;}
 
+/* ONDE ESTÁ TODO O CONTEÚDO DO FORMULÁRIO PRA ENVIO */
 .formulario {
-    margin: 30px;
-}
+    margin: 30px;}
 
+/* TÍTULO DO FORMULÁRIO */
 .formulario h1 {
     font-family: 'Cinzel', serif;
-    color: #f5f1e6;
-    text-shadow: 2px 2px 6px rgba(92, 59, 30, 0.9);
+    color: var(--cor-creme);
+    text-shadow: var(--sombra-texto);
     text-align: center;
-    font-size: 50px;
-}
+    font-size: 50px;}
 
+/* CAIXA ONDE FICA OS INPUTS */
 .input_area {
-    margin-top: 50px;
-}
+    margin-top: 60px;}
 
+/* DIV DO INPUT */
 .input-box {
     margin-top: 30px;
     position: relative;
     display: flex;
-    width: 100%;
-}
+    width: 100%;}
 
+/* O PRÓPRIO INPUT */
 .input-box input {
-    color: #f5f1e6;
-    text-shadow: 2px 2px 6px rgba(92, 59, 30, 0.9);
+    height: 60px;
+    color: var(--cor-creme);
+    text-shadow: var(--sombra-texto);
     background-color: transparent;
     position: relative;
     display: flex;
@@ -63,41 +71,105 @@ body {
     font-size: 16px;
     border-radius: 30px;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    border: 2px solid rgba(245, 235, 210, 0.4);
-}
+    border: 2px solid rgba(245, 235, 210, 0.4);}
 
+/* TIRAR A MARGEM PADRÃO DO INPUT */
 .input-box input:focus {
-    outline: none; 
-}
+    outline: none; }
 
-
+/* INFORMAÇÃO DO INPUT */
 .input-box input::placeholder {
-    color: #f5f1e6b3;
-    text-shadow: 2px 2px 6px rgba(92, 59, 30, 0.9);
-}
+    font-family: sans-serif;
+    color: var(--cor-creme-transparente);
+    text-shadow: var(--sombra-texto);}
 
+/* ÍCONE DO INPUT */
 .input-box i {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     right: 20px;
     font-size: 23px;
-    color: c;
-    text-shadow: 2px 2px 6px rgba(92, 59, 30, 0.9);
-}
+    color: var(--cor-creme);
+    text-shadow: var(--sombra-texto);}
 
+/* CAIXA ONDE FICA AS OPÇÕES DE SENHA */
 .senha_opcao {
     margin-top: 30px;
     display: flex;
     justify-content: space-between;
     margin-left: 30px;
     margin-right: 35px;
-    transform: translateY(-30%);
+    transform: translateY(-30%);}
     
-}
-
 .senha_opcao label input {
     cursor: pointer;
-    accent-color: #f5f1e6;
-    margin-left: 5px;
-}
+    accent-color: var(--cor-creme);
+    margin-left: 5px;}
+
+.login {
+    font-family: sans-serif;
+    font-size: larger;
+    background-color: #a57654; 
+    color: #FDF6E3;
+    text-shadow: 1px 1px 2px rgba(139, 94, 60, 0.3);
+    cursor: pointer;
+    margin-top: 50px;
+    width: 100%;
+    height: 50px;
+    border-radius: 30px;
+    border: none;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;}
+
+.login:hover {
+    background-color: #946347;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25);}
+
+.cadastro {
+    margin-top: 25px;
+    text-align: center;}
+
+.senha_opcao label {
+    font-family: sans-serif;
+    color: var(--cor-creme);
+    text-shadow: var(--sombra-texto);
+    font-size: 1.1rem;}
+
+.senha_opcao a {
+    position: relative;
+    text-decoration: none;
+    font-family: sans-serif;
+    color: var(--cor-creme);
+    text-shadow: var(--sombra-texto);
+    font-size: 1.1rem;}
+
+.senha_opcao a:after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background-color: var(--cor-creme);
+    transition: width 0.3s ease;}
+
+.senha_opcao a:hover::after {
+  width: 100%;}
+
+.senha_opcao input {
+    margin-right: 2px;}
+
+.cadastro p, .cadastro a {
+    font-family: sans-serif;
+    text-shadow: var(--sombra-texto);
+    font-size: 1.1rem;}
+
+.cadastro p {
+    color: var(--cor-creme);}
+
+.cadastro a {
+    margin-left: 10px;
+    color: #d69a70;
+    text-decoration: none;}

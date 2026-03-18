@@ -15,6 +15,7 @@
     <!-- BIBLIOTECA DE ÍCONES -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'> 
 
+    <!-- FONTE EXTERNA DO GOOGLE -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
 
 </head>
@@ -26,15 +27,17 @@
             <h1>Formulário Ghibli</h1>
 
             <div class="input_area">
+
                 <!-- INPUT DO USUÁRIO -->
                 <div class="input-box">
-                    <input type="email" placeholder="Usuário">
+                    <input type="username" placeholder="Usuário" id="usuario" required>
                      <!-- ícone do usuário -->
                     <i class="bx bxs-user"></i>
                 </div>
+
                 <!-- INPUT DA SENHA -->
                 <div class="input-box">
-                    <input type="password" placeholder="Senha">
+                    <input type="password" placeholder="Senha" id="senha" required>
                     <!-- ícone da senha -->
                     <i class="bx bxs-lock-alt"></i>
                 </div>
@@ -56,6 +59,8 @@
             </div>
         </form>
     </main>
-    
 </body>
+
+<script src="Assets/Scripts/totoro.js"></script>
+
 </html>
